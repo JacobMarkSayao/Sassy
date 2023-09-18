@@ -1,0 +1,13 @@
+@use "../abstract/" as *;
+@use "..//base/";
+
+.banner {
+  &__wrapper {
+    h2 {
+      font-size: 5rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+  }
+}

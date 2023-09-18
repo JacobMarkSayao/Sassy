@@ -1,0 +1,115 @@
+@use "./colors" as *;
+$colors: (
+  "dark": $clr--dark,
+  "light": $clr--light,
+  "light--gray": $clr--light--gray,
+  "dark--gray": $clr--dark--gray,
+  "primary": $clr--primary,
+);
+
+@each $key, $val in $colors {
+  .text {
+    &--#{$key} {
+      color: $val;
+    }
+  }
+  .bg {
+    &--#{$key} {
+      background-color: $val;
+    }
+  }
+}
+
+// $text-align: (
+//   "start": start,
+//   "end": end,
+//   "justify": justify,
+//   "center": center,
+//   "left": left,
+//   "right": right,
+// );
+
+$alignments: start, end, justify, center, left, right;
+
+@each $alignment in $alignments {
+  .text--align {
+    &--#{$alignment} {
+      text-align: $alignment;
+    }
+  }
+}
+
+$displays: block, flex, grid, inline-block, none;
+
+@each $display in $displays {
+  .d {
+    &--#{$display} {
+      display: $display;
+    }
+  }
+}
+
+// $display: (
+//   "block": block,
+//   "flex": flex,
+//   "grid": grid,
+//   "inline-block": inline-block,
+// );
+
+// @each $key, $val in $display {
+//   .display {
+//     &-#{key} {
+//       display: $val;
+//     }
+//   }
+// }
+
+$position: (
+  "absolute": absolute,
+  "relative": relative,
+  "sticky": sticky,
+  "fixed": fixed,
+);
+
+@each $key, $val in position {
+  .position {
+    &-#{key} {
+      position: $val;
+    }
+  }
+}
+@for $i from 0 through 20 {
+  //margin btm
+  .mb--#{$i} {
+    margin-bottom: $i + rem;
+  }
+  //padding t,r,b,l
+  .p--#{$i} {
+    padding: $i + rem;
+  }
+  //padding l and r
+  .px--#{$i} {
+    padding: 0 $i + rem;
+  }
+  //padding t and b
+  .py--#{$i} {
+    padding: $i + rem 0;
+  }
+  //padding top
+  .pt--#{$i} {
+    padding-top: $i + rem;
+  }
+  //padding bottom
+  .pb--#{$i} {
+    padding-bottom: $i + rem;
+  }
+  .mt--#{$i} {
+    margin-top: $i + rem;
+  }
+  .ml--#{$i} {
+    margin-left: $i + rem;
+  }
+  .mr--#{$i} {
+    margin-right: $i + rem;
+  }
+}
