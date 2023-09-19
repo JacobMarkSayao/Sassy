@@ -857,6 +857,10 @@ p {
   font-size: clamp(1rem, 5vw, 1.4rem);
 }
 
+.banner p {
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
 body {
   color: #2b2b2b;
   font-family: "Montserrat", sans-serif;
@@ -926,7 +930,6 @@ th,
 td {
   font-family: "Montserrat", sans-serif;
   border: 0;
-  font-size: 100%;
   margin: 0;
   outline: 0;
   padding: 0;
@@ -950,10 +953,6 @@ time {
   display: block;
 }
 
-a {
-  text-decoration: none;
-}
-
 img {
   max-width: 100%;
   width: 100%;
@@ -974,6 +973,18 @@ img {
   list-style: none;
 }
 
+.btn {
+  background-color: transparent;
+  border-radius: 1.5rem;
+  display: inline-block;
+  padding: 1.5rem 5rem;
+  border: 1px solid transparent;
+}
+.btn.bg--yellow {
+  background-color: #fcc520;
+  color: #fff;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -987,4 +998,143 @@ img {
 }
 .header__wrapper nav ul li a {
   color: white;
+}
+
+.banner__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3;
+  align-items: center;
+}
+.banner h1 {
+  font-size: 7rem;
+}
+.banner p {
+  font-size: 2.5rem;
+}
+.banner__img {
+  margin-bottom: -0.6rem;
+}
+
+.about__text {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5;
+  align-items: center;
+}
+.about h1 {
+  font-size: 7rem;
+  position: relative;
+}
+.about h1::before {
+  content: " ";
+  position: absolute;
+  width: 16rem;
+  height: 0.3rem;
+  background-color: #fcc520;
+  bottom: 0;
+}
+.about p {
+  font-size: 1.5rem;
+  padding-top: 2rem;
+}
+
+.services h1 {
+  font-size: 7rem;
+  position: relative;
+}
+.services h1::before {
+  content: " ";
+  position: absolute;
+  width: 14rem;
+  height: 0.3rem;
+  background-color: #fcc520;
+  bottom: 0;
+}
+.services__wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3;
+}
+.services_card {
+  margin: 1rem;
+  padding: 3rem 5rem;
+  border: 2px solid #fcc520;
+}
+.services_card i {
+  color: #fff;
+  font-size: 6rem;
+}
+.services h2 {
+  font-size: 2rem;
+}
+
+.work_e h1 {
+  font-size: 6rem;
+  position: relative;
+}
+.work_e h1::before {
+  content: " ";
+  position: absolute;
+  width: 14rem;
+  height: 0.3rem;
+  background-color: #fcc520;
+  bottom: 0;
+}
+.work_e_wrapper {
+  display: flex;
+}
+.work_e_card {
+  padding: 2rem 5rem;
+  border: 2px solid #fcc520;
+}
+.work_e_card small {
+  color: #cccccc;
+  font-size: 1rem;
+}
+
+.contact h1 {
+  font-size: 6rem;
+  position: relative;
+}
+.contact h1::before {
+  content: " ";
+  position: absolute;
+  width: 14rem;
+  height: 0.3rem;
+  background-color: #fcc520;
+  bottom: 0;
+}
+.contact_wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 5;
+}
+.contact_left li {
+  display: flex;
+  gap: 3rem;
+}
+.contact_left li i {
+  color: #fff;
+}
+.contact_icon ul {
+  display: flex;
+  gap: 2rem;
+}
+.contact_icon a {
+  color: #fff;
+}
+.contact_right label {
+  color: #fff;
+}
+.contact_right input {
+  padding: 2rem 2rem;
+  width: 100%;
+  height: 5rem;
+  margin-bottom: 1rem;
+}
+.contact_right textarea {
+  width: 100%;
+  height: 20rem;
+  padding: 2rem 2rem;
 }/*# sourceMappingURL=main.css.map */
